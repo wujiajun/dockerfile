@@ -1,6 +1,8 @@
-FROM tomcat
+FROM tomcat:8-jre8
 
 RUN apt-get update
+
+RUN apt-get install -y vim
 
 RUN apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
